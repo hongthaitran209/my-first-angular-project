@@ -1,0 +1,32 @@
+@mixin content ($bg, $width) {
+    background-color: $bg;
+    width: $width;
+    padding: 70px 0px;
+    text-align: center;
+    color: white;
+}
+
+
+.header {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 10px 0px;
+    display: block;
+}
+
+.contents {
+    display: flex;
+    .content {
+        @include content(green, 70%);
+    }
+
+    .sidebar {
+        @include content (blue, 30%);
+    }
+}
+
+.footer {
+    @extend .header;
+    background-color: yellow;
+}
